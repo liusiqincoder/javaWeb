@@ -8,3 +8,16 @@ Spring采取了以下几种技术：
    4.利用模板消除重复代码
    5.Bean容器
       将管理的对象称为Bean，Spring是基于容器的框架
+
+Spring是轻量级的控制反转（IOC）和面向切面的框架（AOP）
+    适用范围：1.构建企业应用（SpringMvc+Spring+hibernate/ibatis）
+             2.单独使用bean容器
+             3.其它应用（如：消息的支持）
+             4.在互联网的应用
+             
+    Bean配置项：Id   Class   Scope    Constructor arguments     Properties    Autowiring mode     Initialization/destruction mode
+        作用域：singleton单例，指一个Bean容器中只存在一份
+               prototype每次请求创建新的实例，destory不生效
+               request 每次http请求创建一个实例且仅在当前request生效
+               session同上
+               global session基于portlet的web中有效，在web中和session差不多

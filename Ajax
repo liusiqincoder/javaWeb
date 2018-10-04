@@ -4,3 +4,34 @@
     AJAX = 异步 JavaScript 和 XML。
     AJAX 是一种用于创建快速动态网页的技术。
     
+XMLHttpRequest对象
+    用于在后台与服务器交换数据。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新
+    所有现代浏览器（IE7+、Firefox、Chrome、Safari 以及 Opera）均内建 XMLHttpRequest 对象。
+    创建 XMLHttpRequest 对象的语法：
+      variable=new XMLHttpRequest();
+   老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：
+       variable=new ActiveXObject("Microsoft.XMLHTTP");（相当于创建XMLHttpRequest对象）
+       
+var xmlhttp;
+if (window.XMLHttpRequest)
+{
+    //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+    xmlhttp=new XMLHttpRequest();
+}
+else
+{
+    // IE6, IE5 浏览器执行代码
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：
+xmlhttp.open("GET","ajax_info.txt",true);
+xmlhttp.send();
+
+XMLHttpRequest方法
+      xmlhttp.open("GET","ajax_info.txt",true);
+      xmlhttp.send();
+      
+服务器响应
+     XMLHttpRequest 对象的 responseText 或 responseXML 属性
+     onreadystatechange 事件和readyState,status

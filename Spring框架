@@ -16,6 +16,27 @@ Spring是轻量级的控制反转（IOC）和面向切面的框架（AOP）
              4.在互联网的应用
              
     Bean配置项：Id   Class   Scope    Constructor arguments     Properties    Autowiring mode     Initialization/destruction mode
+        初始化，静态初始化和实例初始化
+        
+        ApplicationContext apc=new ClassPathXmlApplicationContext("beans.xml");
+        /*静态化工厂
+        car c= (car) apc.getBean("aCar");
+        System.out.println(c.getName());
+        
+        xml配置
+        <!--静态工厂方法创建Bean-->
+    <bean id="aCar" class="创建工厂.carFactory" factory-method="getCar">
+        <constructor-arg value="宝马"/>
+    </bean>
+
+    <!--实例化工厂创建Bean-->
+    <!--首先，创建实例工厂对象-->
+    <bean id="instanceFactory" class="创建工厂.instanceFactory"></bean>
+    <!--然后就可以使用instanceFactory创建car对象-->
+    <bean id="instanceCar" factory-bean="instanceFactory" factory-method="getCar" scope="prototype">
+        <constructor-arg value="奔驰"/>
+    </bean>
+    
         作用域：singleton单例，指一个Bean容器中只存在一份
                prototype每次请求创建新的实例，destory不生效
                request 每次http请求创建一个实例且仅在当前request生效

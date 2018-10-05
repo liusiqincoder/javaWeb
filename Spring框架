@@ -42,3 +42,25 @@ Spring是轻量级的控制反转（IOC）和面向切面的框架（AOP）
                request 每次http请求创建一个实例且仅在当前request生效
                session同上
                global session基于portlet的web中有效，在web中和session差不多
+       将Bean创建后，有Spring的ioc容器管理（充当管理者的一般是BeanFactory或ApplicationContext）
+       bean的生命周期 :
+              Bean的建立-->Setter注入-->实行bean实现的接口的方法（BeanNameAware的setBeanName()，BeanFactoryAware的setBeanFactory()
+               BeanPostProcessors的processBeforeInitialization()，InitializingBean的afterPropertiesSet()）-->初始化-->
+               BeanPostProcessors的processAfterInitialization()-->容器关闭-->销毁
+               
+               Bean的创建  
+                   在xml文件中指定init-method，格式如下
+                   <bean id="instanceCar" factory-bean="instanceFactory" init-method="methodName"
+                     factory-method="getCar" scope="singleton">
+                     <constructor-arg value="奔驰"/>
+                   </bean>
+                   销毁
+                   <bean id="instanceCar" factory-bean="instanceFactory" 
+                      destroy-method="methodName" factory-method="getCar" scope="singleton">
+                    <constructor-arg value="奔驰"/>
+                   </bean>
+                   这里的scope要为singleton，而且容器要关闭才能自动进行销毁
+              后处理bean   在容器内的bean初始化前后执行before和after方法
+                   首先的有一个类 implements BeanPostProcessor，实现before和after
+                   然后在xml配置该类：<bean class="classPath"></bean>
+              

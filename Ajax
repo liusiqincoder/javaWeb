@@ -31,6 +31,7 @@ xmlhttp.send();
 XMLHttpRequest方法
       xmlhttp.open("GET","ajax_info.txt",true);
       xmlhttp.send();
+      getAllResponseHeaders()  获取head请求信息
       
 服务器响应
      XMLHttpRequest 对象的 responseText 或 responseXML 属性

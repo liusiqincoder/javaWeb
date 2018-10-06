@@ -71,11 +71,23 @@ Spring是轻量级的控制反转（IOC）和面向切面的框架（AOP）
            http://www.springframework.org/schema/context/spring-context.xsd"
           加入注解扫描语句<!--开启注解扫描，加上才能用ioc注解-->
           <context:component-scan base-package="ioc的注解开发"/> 
-          在类上加上@Component("user")相当于创建了bean
-                  @Scope控制bean的作用范围
           <context:component-scan>提供了两个子标签
               <context:include-filter>  use-dafault-filters="false"的情况下 需要扫描的文件
               <context:exclude-filter>  use-dafault-filters="true"的情况下  不需要扫描的文件
-          @Resource  注解默认按名称装配。名称可以通过name属性指定，如果没有指定name属性，默认取属性的名称作为bean名称寻找依赖对象
-             @Qualifier("user") 和@Autowired配合使用
+              
+          在类上加上@Component("user")相当于创建了bean
+                       也可以换成别的
+                        @Controller :WEB 层 
+                        @Service  :业务层 
+                        @Repository :持久层 
+                  @Scope控制bean的作用范围
+          类的属性注入
+          对于变量
+             @Value(value)
+          对于对象
+              @Resource(相当于@Qualifier+@Autowired )  注解默认按名称装配。名称可以通过name属性指定，如果没有指定name属性，
+                         默认取属性的名称作为bean名称寻找依赖对象
+              @Qualifier("user") 和@Autowired配合使用   指定名称
+              @Autowired  指定类型
+              
           

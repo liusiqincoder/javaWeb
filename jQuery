@@ -68,4 +68,4 @@ $(":button") 	选取所有 type="button" 的 <input> 元素 和 <button> 元素
 $("tr:even") 	选取偶数位置的 <tr> 元素 
 $("tr:odd") 	选取奇数位置的 <tr> 元素
 ![image](https://github.com/liusiqincoder/picture/blob/master/jquery001.png)
-
+<image src="https://github.com/liusiqincoder/picture/blob/master/jquery001.png">

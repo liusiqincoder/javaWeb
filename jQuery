@@ -67,10 +67,5 @@ $("a[target!='_blank']") 	选取所有 target 属性值不等于 "_blank" 的 <a
 $(":button") 	选取所有 type="button" 的 <input> 元素 和 <button> 元素
 $("tr:even") 	选取偶数位置的 <tr> 元素 
 $("tr:odd") 	选取奇数位置的 <tr> 元素
+![image](https://github.com/liusiqincoder/picture/blob/master/jquery001.png)
 
-常见 DOM 事件：
-鼠标事件 	键盘事件 	表单事件 	文档/窗口事件
-click 	keypress 	submit 	load
-dblclick 	keydown 	change 	resize
-mouseenter 	keyup 	focus 	scroll
-mouseleave 	hover 	blur 	unload

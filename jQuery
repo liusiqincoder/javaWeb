@@ -1,0 +1,76 @@
+jQuery 版本 2 以上不支持 IE6，7，8 浏览器。
+如果需要支持 IE6/7/8，那么请选择1.9
+你还可以通过条件注释在使用 IE6/7/8 时只包含进1.9。
+<!--[if lt IE 9]>
+    <script src="jquery-1.9.0.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+    <script src="jquery-2.0.0.js"></script>
+<!--<![endif]-->
+
+jQuery 语法是通过选取 HTML 元素，并对选取的元素执行某些操作。
+基础语法： $(selector).action()
+
+为了防止文档在完全加载（就绪）之前运行 jQuery 代码，即在 DOM 加载完成后才可以对 DOM 进行操作
+在ready写函数
+
+
+$(document).ready(function(){
+ 
+   // 开始写 jQuery 代码...
+ 
+});
+
+
+简洁写法（与以上写法效果相同）:
+$(function(){
+   // 开始写 jQuery 代码... 
+});
+
+相当于
+JavaScript 入口函数:
+window.onload = function () {
+    // 执行代码
+}
+
+jQuery 选择器
+jQuery 选择器允许您对 HTML 元素组或单个元素进行操作。
+jQuery 选择器基于元素的 id、类、类型、属性、属性值等"查找"（或选择）HTML 元素。 它基于已经存在的 CSS 选择器，除此之外，它还有一些自定义的选择器。
+jQuery 中所有选择器都以美元符号开头：$()。
+
+元素选择器
+jQuery 元素选择器基于元素名选取元素。
+在页面中选取所有 <p> 元素:
+$("p")
+
+ #id 选择器
+jQuery #id 选择器通过 HTML 元素的 id 属性选取指定的元素。
+页面中元素的 id 应该是唯一的，所以您要在页面中选取唯一的元素需要通过 #id 选择器。
+通过 id 选取元素语法如下：
+$("#test")
+
+ .class 选择器
+jQuery 类选择器可以通过指定的 class 查找元素。
+语法如下：
+$(".test")
+
+其他选择器语法
+$("*") 	选取所有元素 	
+$(this) 	选取当前 HTML 元素 	
+$("p.intro") 	选取 class 为 intro 的 <p> 元素 	
+$("p:first") 	选取第一个 <p> 元素 	在线实例
+$("ul li:first") 	选取第一个 <ul> 元素的第一个 <li> 元素 	
+$("ul li:first-child") 	选取每个 <ul> 元素的第一个 <li> 元素 
+$("[href]") 	选取带有 href 属性的元素 	在线实例
+$("a[target='_blank']") 	选取所有 target 属性值等于 "_blank" 的 <a> 元素 	
+$("a[target!='_blank']") 	选取所有 target 属性值不等于 "_blank" 的 <a> 元素
+$(":button") 	选取所有 type="button" 的 <input> 元素 和 <button> 元素
+$("tr:even") 	选取偶数位置的 <tr> 元素 
+$("tr:odd") 	选取奇数位置的 <tr> 元素
+
+常见 DOM 事件：
+鼠标事件 	键盘事件 	表单事件 	文档/窗口事件
+click 	keypress 	submit 	load
+dblclick 	keydown 	change 	resize
+mouseenter 	keyup 	focus 	scroll
+mouseleave 	hover 	blur 	unload

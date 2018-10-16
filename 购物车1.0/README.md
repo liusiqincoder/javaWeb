@@ -5,18 +5,18 @@
 
 #  效果展示
 登陆页面
-
+![image](https://github.com/liusiqincoder/javaWeb/blob/master/%E8%B4%AD%E7%89%A9%E8%BD%A61.0/登陆.png)
 注册页面
-
+![image](https://github.com/liusiqincoder/javaWeb/blob/master/%E8%B4%AD%E7%89%A9%E8%BD%A61.0/注册.png)
 购买页面
-
+![image](https://github.com/liusiqincoder/javaWeb/blob/master/%E8%B4%AD%E7%89%A9%E8%BD%A61.0/购买页面.png)
 购物车页面
-
+![image](https://github.com/liusiqincoder/javaWeb/blob/master/%E8%B4%AD%E7%89%A9%E8%BD%A61.0/购物车页面.png)
 数据库里的订单数据
+![image](https://github.com/liusiqincoder/javaWeb/blob/master/%E8%B4%AD%E7%89%A9%E8%BD%A61.0/数据库存入订单数据.png)
 
-
-    以及注册数据
-    
+以及注册数据
+   ![image](https://github.com/liusiqincoder/javaWeb/blob/master/%E8%B4%AD%E7%89%A9%E8%BD%A61.0/数据库存入注册数据.png)
     
 #  分包
 <li>com.dao.controller存放的是servlet，用来控制业务逻辑，比如用户注册，登陆处理，订单处理等请求

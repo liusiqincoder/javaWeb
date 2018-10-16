@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    background: url(/购物车系统/picture/购买背景.jpg) no-repeat;
+    width: 80%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.guideBar {
+    width: 100%;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.8);
+}
+
+.guideBar a {
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: white;
+    display: block;
+    font-size: 17px;
+    transition: 0.5s;
+}
+
+.guideBar a:hover {
+    background: white;
+    color: black;
+}
+
+.showThing {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+}
+
+.showThing form {
+    float: left;
+    position: relative;
+    padding: 10px 10px;
+    display: block;
+    width: 170px;
+    height: 180px;
+}
+
+/*
+
+.div2{
+    padding: 0;
+}
+*/
+
+.buyStyle{
+    margin: auto;
+}
+
+.buyStyle input{
+    position: absolute;
+    align:center;
+
+}
+
+.buyStyle span{
+    display: block;
+    z-index: 1;
+}
+
+.myImg {
+    transition: 0.3s;
+    cursor: pointer;
+    width: 170px;
+    border-radius: 5px;
+    height: 150px;
+    z-index: -1;
+}
+
+.myImg:hover {
+    opacity: 0.7;
+}
+
+.buyBar {
+    background: #ff524d;
+    width: 100%;
+    padding: 0 0;
+    float: left;
+}
+
+.addThing {
+    background: red;
+    color: black;
+    float: left;
+    width: auto;
+    transition: 0.3s;
+}

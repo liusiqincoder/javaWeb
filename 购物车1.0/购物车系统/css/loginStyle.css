@@ -1,0 +1,22 @@
+.bg-img {
+    background: url(/购物车系统/picture/登录背景001.jpg) rgba(255, 117, 215, 0.8);
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 100%;
+    background-position: center center;
+    position: relative;
+}
+
+.spanClass {
+    float: right;
+    padding-top: 16px;
+}
+
+.pos {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    /*width: 300px;*/
+    /*height:300px;*/
+    text-align: left;
+}

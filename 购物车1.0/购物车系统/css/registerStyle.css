@@ -1,0 +1,16 @@
+.bg-img {
+    background: url(/购物车系统/picture/注册背景002.jpeg) rgba(245, 255, 250, 0.8);
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 100%;
+    background-position: center center;
+    position: relative;
+}
+
+.div-class {
+    position: absolute;
+    margin: auto;
+    top: 25%;
+    left: 50%;
+    text-align: left;
+}

@@ -14,7 +14,6 @@ Java编译器没有识别方法描述符
 
 Java编译器调用方法的顺序  
 
-![image](java调用方法.png)  
 
 >另外，如果存在多个合适方法，编译器会调用其中最为合适的方法，按照参数的匹配程度，比如null，  
 匹配Object，String，会优先匹配String，因为String是Object的子类  

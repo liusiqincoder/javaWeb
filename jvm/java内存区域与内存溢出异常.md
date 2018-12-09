@@ -1,6 +1,6 @@
 ## 运行时数据区域
 
-![image](运行时数据区.png)
+![image](https://github.com/liusiqincoder/javaWeb/blob/master/jvm/picture/运行时数据区.png)
 
 *  `程序计数器`  每个线程都有一个，负责分支，循环，跳转，异常恢复，线程恢复  
 *  `虚拟机栈`   （栈内存和堆内存）用于存储局部变量表，操作数栈，动态链接，方法出口等  
@@ -26,12 +26,12 @@ new
 ##  对象的访问定位  
 * 句柄访问（稳定地地址，常用）  
 
-![image](句柄访问.png)  
+![image](https://github.com/liusiqincoder/javaWeb/blob/master/jvm/picture/句柄访问.png)  
 
 *  直接指针访问（速度快）  
 
 
-![image](直接指针访问.png) 
+![image](https://github.com/liusiqincoder/javaWeb/blob/master/jvm/picture/直接指针访问.png) 
 
 ##  堆内存问题地思路  
 用内存映像分析工具确定问题类型  

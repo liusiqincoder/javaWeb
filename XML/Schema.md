@@ -75,9 +75,20 @@ elementFormDefault="qualified">
 
 ##  元素
 
->  targetNamespace="http://www.runoob.com" 
+>  指定命名空间
+>
+>  xsi:targetNamespace="http://www.runoob.com" 
+>
+>  不指定
+>
+>  xsi:noNamespaceSchemaLocation="......"
 
-指定命名空间
+```
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        <--指定元素使用时必须用命名空间限定-->
+           elementFormDefault="qualified"
+attributeFormDefault="unqualified" targetNamespace="/233/233">
+```
 
 
 
@@ -91,7 +102,34 @@ elementFormDefault="qualified">
 
 指出默认命名空间
 
+## 元素组
 
+```
+<xs:group name="...">
+包含多个元素及其约束
+</xs:group>
+
+引用
+<xs:group ef="元素组名称"/>
+```
+
+## 属性
+
+> 只有xs:complexType才有属性
+>
+> name,type,default,fixed,ref,use
+
+## 注释
+
+> <!--注释-->
+>
+> <annotation>
+>
+> <documentation>
+>
+> <appinfo>
+>
+> </annotation>
 
 ## XML文档应用Schema
 
@@ -102,8 +140,12 @@ elementFormDefault="qualified">
 <note xmlns="http://www.runoob.com"
 <--可用的实例命名空间-->
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-<--Schema-->
+<--需要与Schema的targetnamespace一致-->
 xsi:schemaLocation="http://www.runoob.com note.xsd">
+
+eg
+指定标签的命名空间
+xmlns:s="233"
 ```
 
 
@@ -129,7 +171,7 @@ xsi:schemaLocation="http://www.runoob.com note.xsd">
 
   
 
-  ## AXD属性  
+  ## XSD属性  
 
   > //定义属性
   >
@@ -555,6 +597,26 @@ substitutionGroup 中的所有元素（主元素和可替换元素）必须被�
   * pattern (NMTOKENS、IDREFS 以及 ENTITIES 无法使用此约束)
   * whiteSpace
 
+##  内置基本数据类型
+
+> 字符串
+>
+> string ,  QName
+>
+> 数值
+>
+> decimal   float   double   hexBinary
+>
+> boolean
+>
+> anyURI
+
+##  内置扩展数据类型
+
+> NMTOKEN   NMTOKENS    ID   IDREF   ENTITY   ENTITYS
+>
+> normalizedString  
+
 
 
 ##  XSD 日期和时间数据类型
@@ -668,3 +730,19 @@ substitutionGroup 中的所有元素（主元素和可替换元素）必须被�
 <xs:element name="blobsrc" type="xs:hexBinary"/> 
 
 <xs:attribute name="src" type="xs:anyURI"/> 
+
+##  自定义数据类型
+
+```
+<xs:simpleType>
+限制  <xs:restriction>
+列表   <xs:list>
+联合   <xs:union>
+<xs:complexType>
+顺序   <xs:sequence>
+选择   <xs:choice>
+无序   <xs:all>
+简单内容   <xs:simpleContent> 限制   扩展
+复杂内容   <xs:complexContent> 限制   扩展
+```
+
